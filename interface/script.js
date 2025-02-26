@@ -143,6 +143,7 @@ function submit_data() {
         matiere_detestee: document.getElementById('matiere_detestee').value,
         loisirs: Array.from(document.querySelectorAll('input[name="loisirs"]:checked')).map(el => el.value),
         matiere_preferee: document.getElementById('matiere_preferee').value,
+        specialite1: document.getElementById('specialite1').value,
         soft_skills: Array.from(document.querySelectorAll('input[name="soft_skills"]:checked')).map(el => el.value),
     };
 

@@ -89,6 +89,16 @@ const SOFT_SKILLS_MAP = {
   '11': 'Gestiondutemps',
   '12': 'Travailenequipe'
 };
+const SPECIALITE1_MAP = {
+  '1': 'Informatisue',
+  '2': 'Ingenierie',
+  '3': 'Medecine',
+  '4': 'Droit',
+  '5': 'Mathematiques appliquees',
+  '6': 'Physique',
+  '7': 'Economie',
+  '8': 'Architecture'
+};
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -109,6 +119,7 @@ function createWriter(append = false) {
       { id: 'matiere_detestee', title: 'detestee' },
       { id: 'loisirs', title: 'Loisirs' },
       { id: 'matiere_preferee', title: 'preferee' },
+      { id: 'specialite1', title: 'specialite' },
       { id: 'soft_skills', title: 'Skills' }
     ],
     append: append
@@ -130,6 +141,7 @@ function transformData(userData) {
     matiere_detestee: MATIERE_MAP[userData.matiere_detestee] || '',
     loisirs: userData.loisirs.map(id => LOISIRS_MAP[id]).filter(Boolean).join(', '),
     matiere_preferee: MATIERE_MAP[userData.matiere_preferee] || '',
+    specialite1: SPECIALITE1_MAP[userData.specialite1] || '',
     soft_skills: userData.soft_skills.map(id => SOFT_SKILLS_MAP[id]).filter(Boolean).join(', ')
   };
 }

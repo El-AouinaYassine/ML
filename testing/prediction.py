@@ -12,6 +12,8 @@ print("----------")
 
 # Load your CSV file (replace 'data.csv' with your file path)
 data = pd.read_csv('outpu2t.csv')
+print("-----------cols------------")
+print(data.columns)
 # Example: Assume 'id' and 'target' are not needed
 X = data.drop(columns=['Age'])  # Adjust column names as necessary
 

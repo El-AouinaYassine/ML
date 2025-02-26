@@ -128,9 +128,9 @@ def process_csv(input_file, output_file):
         df[['Francais', 'Anglais']],
         preferee,
         detestee,
-        # specialite,
-        sexe_dummies,
+        specialite,
         ville_dummies,
+        sexe_dummies,
         bac_dummies,
         loisirs,
         skills
